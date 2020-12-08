@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.card {
+    @apply my-2 p-3 leading-snug bg-white border-b border-gray-400 cursor-pointer rounded;
+}
+
+.card:hover {
+    @apply bg-gray-100;
+}
