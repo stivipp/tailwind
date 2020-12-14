@@ -2,16 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+    .text-shadow {
+        text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.35);
+    }
+}
+
 
 @layer components {
+
+    /*
+    CARDS
+    */
+
     .card {
-        @apply my-2 p-3 leading-snug bg-white border-b border-gray-400 cursor-pointer rounded;
+        @apply my-2 leading-snug bg-white border-b border-gray-400 cursor-pointer rounded;
     }
     
     .card:hover {
         @apply bg-gray-100;
     }
     
+    /*
+    LIST
+    */
+
     .list {
         /* size */
         @apply flex-shrink-0;
@@ -27,11 +42,28 @@
     
     }
 
+    /*
+    BUTTONS
+    */
+
+    .btn {
+        @apply py-1 px-3 font-semibold text-gray-50 rounded border-b border-gray-600 text-shadow;
+
+    }
+    
+    .btn-green {
+        @apply bg-green-500;
+    }
+
+    .btn-green:hover,
+    .btn-green:active {
+        @apply bg-green-400;
+    }
+
     @screen sm {
         .list {
             @apply w-80 mx-4 mb-0;
         } 
-
     }
 
 }
