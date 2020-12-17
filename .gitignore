@@ -1,2 +1,4 @@
 node_modules
 public/style.css
+.DS_Store
+package-lock.json
