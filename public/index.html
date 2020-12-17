@@ -9,7 +9,7 @@
 
   <main class="flex h-screen bg-purple-500 lg:bg-gradient-to-r from-red-500 to-pink-400">   
     <div class="sm:flex items-start w-screen px-4 py-10 overflow-x-auto">
-
+      <div id="overlay" class="fixed top-0 left-0 w-full h-screen bg-black bg-opacity-70 z-10"></div>
       <!-- Board Games -->
       <section class="list">
         <div class="h-full overflow-y-auto">
@@ -38,10 +38,16 @@
             </li>
             <li class="card">
               <div class='p-3'>
+                <aside class="flex mb-1.5">
+                  <span class="block w-8 h-2 mr-2 rounded-full bg-yellow-300"></span>
+                  <span class="block w-8 h-2 mr-2 rounded-full bg-red-600"></span>
+                  <span class="block w-8 h-2 mr-2 rounded-full bg-green-400"></span>
+                  <span class="block w-8 h-2 mr-2 rounded-full bg-blue-600"></span>
+                </aside>
+
                 <p>
                   DUNE and SPICE and WORMS
-      
-        </p>  
+                </p>  
               </div>            
             </li>
             <li class="card">
@@ -70,6 +76,11 @@
             </li>
             <li class="card">
               <div class='p-3'>
+                <aside class="flex mb-1.5">
+                  <span class="block w-8 h-2 mr-2 rounded-full bg-green-400"></span>
+                  <span class="block w-8 h-2 mr-2 rounded-full bg-blue-600"></span>
+                </aside>
+                
                 <p>
                   Robin Hood
       
@@ -147,19 +158,37 @@
               
 
               <div class='p-3'>
+                <aside class="flex mb-1.5">
+                  <span class="block w-8 h-2 mr-2 rounded-full bg-blue-600"></span>
+                </aside>
                 <p>
                   Ryby rycku a potom godzilla :D
                 </p>  
               </div>
             </li>
+
             <li class="card">
+
               <figure class="flex items-center max-h-56 sm:max-h-36 border-b border-gray-200 overflow-hidden rounded-t">
                 <img src="./img/doggyStyle.jpg" alt="je tam velmi mily havo, co ti poviem v mikine, zltej a ma prizmurene oci a je malicky xD">
               </figure>
+
               <div class='p-3'>
+
+                <aside class="flex mb-1.5">
+                  <span class="block w-8 h-2 mr-2 rounded-full bg-yellow-800"></span>
+                </aside>
+
                 <p>
-                  CD/DISK/ TO KYO DRIFT
+                  Hatchi peso najlepsi pes 
                 </p>  
+
+                <footer class="flex mt-2  text-xs text-white">
+                  <a class=" px-1 py-0.5 mr-1 bg-gray-500 opacity-50 hover:bg-gray-700 rounded" href="#">duna</a>
+                  <a class=" px-1 py-0.5 mr-1 bg-gray-500 opacity-50 hover:bg-gray-700 rounded" href="#">ryba</a>
+                  <a class=" px-1 py-0.5 mr-1 bg-gray-500 opacity-50 hover:bg-gray-700 rounded" href="#">boy</a>
+                </footer>
+
               </div>
             </li>
           </ul>
@@ -194,7 +223,7 @@
       <section class="list">
       
         <header>
-          <h3 class="p-1 font-bold leading-none text-gray-900">Brain Thougths</h3>
+          <h3 contenteditable="" class="p-1 font-bold leading-none text-gray-900 outline-none focus:ring-2 focus:ring-blue-500 rounded">Brain Thougths</h3>
         </header>
     
         <ul>
@@ -212,13 +241,66 @@
               </p>  
             </div>
           </li>
-          <li class="card">
+
+          <li class="card relative z-20">
             <div class='p-3'>
-              <p>
-            DUNE and SPICE and WORMS
+              <aside class="flex mb-1.5">
+                <span class="label label-yellow"></span>
+                <span class="label label-red"></span>
+              </aside>
+              <p contenteditable="" class="outline-none focus:ring-2 focus:ring-blue-500 rounded">
+                 DUNE and SPICE and WORMS
               </p>  
+
+              <footer class="flex mt-2  text-xs text-white">
+                <a class=" px-1 py-0.5 mr-1 bg-gray-500 opacity-50 hover:bg-gray-700 rounded" href="#">&dagger;</a>
+                <a class=" px-1 py-0.5 mr-1 bg-gray-500 opacity-50 hover:bg-gray-700 rounded" href="#">&#x1F649;</a>            
+                <a class=" px-1 py-0.5 mr-1 bg-gray-500 opacity-50 hover:bg-gray-700 rounded" href="#">&#x1F377;</a>            
+              </footer>
             </div>
+
+     
+            <!-- POP UP -->
+            <ul class="w-40 ml-2 text-sm text-white font-semibold sm:absolute top-0 left-80 sm:m-0" id="popup">
+              <li class="flex">
+                <a class="flex items-center px-2.5 py-2 mb-1 bg-black bg-opacity-60 hover:bg-opacity-100 rounded transform hover:translate-x-1 transition duration-75 ease-in" href="#">
+                  
+                  <svg class="w-4 h-4 mr-1.5" viewBox="0 0 20 20">
+                    <path class="fill-current" d="M17.896,12.706v-0.005v-0.003L15.855,2.507c-0.046-0.24-0.255-0.413-0.5-0.413H4.899c-0.24,0-0.447,0.166-0.498,0.4L2.106,12.696c-0.008,0.035-0.013,0.071-0.013,0.107v4.593c0,0.28,0.229,0.51,0.51,0.51h14.792c0.28,0,0.51-0.229,0.51-0.51v-4.593C17.906,12.77,17.904,12.737,17.896,12.706 M5.31,3.114h9.625l1.842,9.179h-4.481c-0.28,0-0.51,0.229-0.51,0.511c0,0.703-1.081,1.546-1.785,1.546c-0.704,0-1.785-0.843-1.785-1.546c0-0.281-0.229-0.511-0.51-0.511H3.239L5.31,3.114zM16.886,16.886H3.114v-3.572H7.25c0.235,1.021,1.658,2.032,2.75,2.032c1.092,0,2.515-1.012,2.749-2.032h4.137V16.886z"></path>
+                  </svg>
+                  
+
+                  Edit Labels
+                
+                </a>
+              </li>
+              <li class="flex">
+                <a class="flex items-center px-2.5 py-2 mb-1 bg-black bg-opacity-60 hover:bg-opacity-100 rounded transform hover:translate-x-1 transition duration-75 ease-in" href="#">
+                  
+                  <svg class="w-4 h-4 mr-1.5" viewBox="0 0 20 20">
+                    <path class="fill-current" d="M17.211,3.39H2.788c-0.22,0-0.4,0.18-0.4,0.4v9.614c0,0.221,0.181,0.402,0.4,0.402h3.206v2.402c0,0.363,0.429,0.533,0.683,0.285l2.72-2.688h7.814c0.221,0,0.401-0.182,0.401-0.402V3.79C17.612,3.569,17.432,3.39,17.211,3.39M16.811,13.004H9.232c-0.106,0-0.206,0.043-0.282,0.117L6.795,15.25v-1.846c0-0.219-0.18-0.4-0.401-0.4H3.189V4.19h13.622V13.004z"></path>
+                  </svg>
+
+
+                  Edit Tag
+              
+                </a>
+              </li>
+              <li class="flex">
+                <a class="flex items-center px-2.5 py-2 mb-1 bg-black bg-opacity-60 hover:bg-opacity-100 rounded transform hover:translate-x-1 transition duration-75 ease-in" href="#">
+                  
+                  <svg class="w-4 h-4 mr-1.5" viewBox="0 0 20 20">
+                    <path  class="fill-current" d="M17.927,5.828h-4.41l-1.929-1.961c-0.078-0.079-0.186-0.125-0.297-0.125H4.159c-0.229,0-0.417,0.188-0.417,0.417v1.669H2.073c-0.229,0-0.417,0.188-0.417,0.417v9.596c0,0.229,0.188,0.417,0.417,0.417h15.854c0.229,0,0.417-0.188,0.417-0.417V6.245C18.344,6.016,18.156,5.828,17.927,5.828 M4.577,4.577h6.539l1.231,1.251h-7.77V4.577z M17.51,15.424H2.491V6.663H17.51V15.424z"></path>
+                  </svg>
+
+
+                  Archive
+                
+                </a>
+              </li>
+            </ul>
           </li>
+
           <li class="card">
             <div class='p-3'>
               <p>

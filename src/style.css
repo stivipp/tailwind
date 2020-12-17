@@ -66,5 +66,21 @@
         } 
     }
 
+    /*
+    LABELS
+    */
+
+    .label {
+        @apply block w-8 h-2 mr-2 rounded-full;
+    }
+
+    .label-yellow {
+        @apply  bg-yellow-300;
+    }
+
+    .label-red {
+        @apply  bg-red-600;
+    }
+
 }
 
