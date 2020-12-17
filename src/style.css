@@ -30,7 +30,7 @@
     .list {
         /* size */
         @apply flex-shrink-0;
-        @apply h-full mb-10 p-3 pb-2;
+        @apply w-full mb-10 p-3 pb-2;
 
         /* color */
         @apply bg-gray-200;
